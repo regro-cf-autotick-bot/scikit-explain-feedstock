@@ -1,24 +1,24 @@
 {% set name = "scikit-explain" %}
-{% set version = "0.0.9" %}
+{% set version = "0.1.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: e3601b24cbe3f862bfa4d8d8ee84c97d6990d53ba92e12da445f916ffa9c04d5
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5e236c9d5c1e43e6ac580830882d716e0f9c710e2a08da40e57f5288d8a7d6bb
 
 build:
-  noarch: python 
+  noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - python >=3.8
-    
+
   run:
     - ipywidgets
     - lime >=0.2.0
@@ -37,7 +37,7 @@ test:
   requires:
     - pip
   commands:
-    - pip check 
+    - pip check
 
   imports:
     - skexplain
@@ -47,13 +47,13 @@ test:
     - skexplain.plot
 
 about:
-  home: "https://github.com/monte-flora/scikit-explain/"
+  home: https://github.com/monte-flora/scikit-explain/
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "A user-friendly python package for computing and plotting machine learning explainability output."
-  doc_url: "https://scikit-explain.readthedocs.io"
-  dev_url: "https://github.com/monte-flora/scikit-explain/"
+  summary: A user-friendly python package for computing and plotting machine learning explainability output.
+  doc_url: https://scikit-explain.readthedocs.io
+  dev_url: https://github.com/monte-flora/scikit-explain/
 
 extra:
   recipe-maintainers:
