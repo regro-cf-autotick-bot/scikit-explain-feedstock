@@ -1,11 +1,11 @@
-About scikit-explain
-====================
+About scikit-explain-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scikit-explain-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/monte-flora/scikit-explain/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scikit-explain-feedstock/blob/main/LICENSE.txt)
 
 Summary: A user-friendly python package for computing and plotting machine learning explainability output.
 
